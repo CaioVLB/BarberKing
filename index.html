@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberKing</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap" rel="stylesheet">
+
+    <script src="js/script1.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>BarberKing</h1>
+    </header>
+
+    <main>
+        <div class="title">
+            <h2>Controle de Serviços</h2>
+            <span>Lista de serviços.</span>
+        </div>
+
+        <div class="card">
+            <div class="lineInput">
+                <label>Cliente</label>
+                <input type="text" id="cliente" placeholder="Nome do cliente">
+            </div>
+
+            <div class="lineInput">
+                <label>Serviço</label>
+                <select id="servico">
+                    <option value="" disabled selected>Selecione um serviço</option>
+                    <option>Corte Social</option>
+                    <option>Corte Militar</option>
+                    <option>Corte Degradê</option>
+                    <option>Corte Undercut</option>
+                    <option>Barba King</option>
+                    <option>Sobrancelha</option>
+                </select>
+            </div>
+
+            <div class="lineInput">
+                <label>Preço</label>
+                <input type="number" id="preco" placeholder="Preço do serviço">
+            </div>
+
+            <button onclick="servico.salvar()" id="exchangeButton">Salvar</button>
+            <button onclick="servico.cancelar()">Cancelar</button>
+        </div>
+
+        <details class="center">
+            <summary>Preços:</summary>
+            <p>Social - R$ 20</p>
+            <p>Militar - R$ 25</p>
+            <p>Degradê - R$ 30</p>
+            <p>Undercut - R$ 30</p>
+            <p>Barba King - R$ 15</p>
+            <p>Sobrancelha - R$ 10</p>
+        </details>
+
+        <div class="lucro">
+            <table border="1">
+                <thead>
+                    <th class="center">Lucro Total</th>
+                </thead>
+                <tbody id="lucroTotal">
+                    <td>R$ 0</td>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="content">
+            <table border="1">
+                <thead>
+                    <th class="center">ID</th>
+                    <th>Cliente</th>
+                    <th>Serviço</th>
+                    <th class="center">Preço</th>
+                    <th class="center">Editar</th>
+                </thead>
+                <tbody id="tbody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </main>
+    
+</body>
+
+
+</style>
+
+</html>
